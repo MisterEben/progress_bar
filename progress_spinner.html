@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>|MLE</title>
+    <link rel="stylesheet" href="spinner.css">
+    <script src="jquery.js"></script>
+</head>
+<body>
+    
+    <div class="container">
+
+        <div class="card">
+            <div class="box">
+                <div class="percent">
+
+                    <svg>
+                        <circle cx="70" cy="70" r="70"></circle>
+                        <circle cx="70" cy="70" r="70"></circle>
+                    </svg>
+
+                    <div class="number">
+                        <h2>90<span>%</span></h2>
+                    </div>
+
+                </div>
+                <h2 class="title">JAVASCRIPT</h2>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="box">
+                <div class="percent">
+
+                    <svg>
+                        <circle cx="70" cy="70" r="70"></circle>
+                        <circle cx="70" cy="70" r="70"></circle>
+                    </svg>
+
+                    <div class="number">
+                        <h2>70<span>%</span></h2>
+                    </div>
+
+                </div>
+                <h2 class="title">Angular</h2>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="box">
+                <div class="percent">
+
+                    <svg>
+                        <circle cx="70" cy="70" r="70" per="85"></circle>
+                        <circle class="crcl" cx="70" cy="70" r="70" per="85"></circle>
+                    </svg>
+
+                    <div class="number">
+                        <h2>85<span>%</span></h2>
+                    </div>
+
+                </div>
+                <h2 class="title">React</h2>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+    <script>
+        $('circle').each(function(){
+    
+            let $this = $(this);
+            let per = $this.attr('per');
+            $this.css("stroke-dashoffset", calc(440 - (440 * per) / 100));
+    
+            // $({animatedValue: 0}).animate({animatedValue: per}, {
+            //     duration: 1000,
+            //     step: function(){
+            //         $this.attr('per', Math.floor(this.animatedValue) +'%');
+            //     },
+            //     complete: function(){
+            //         $this.attr('per', Math.floor(this.animatedValue) +'%');
+            //     }
+            // })
+    
+        });
+    </script>
+</body>
+</html>
